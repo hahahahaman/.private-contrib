@@ -1,0 +1,141 @@
+#+TITLE: SLIME contribution layer for Spacemacs
+
+[[file:img/slime.png]]
+
+* Table of Contents                                                   :TOC@4:
+ - [[#description][Description]]
+ - [[#install][Install]]
+ - [[#key-bindings][Key Bindings]]
+   - [[#help][Help]]
+   - [[#evaluation][Evaluation]]
+   - [[#repl][REPL]]
+   - [[#compile][Compile]]
+   - [[#navigation][Navigation]]
+   - [[#debug][Debug]]
+   - [[#profiling][Profiling]]
+   - [[#who---cross-referencing][Who - Cross referencing]]
+   - [[#tracing][Tracing]]
+   - [[#macro-expansion][Macro Expansion]]
+
+* Description
+
+A Spacemacs contribution layer for [[https://github.com/slime/slime][SLIME]].
+
+* Install
+
+If you have previously installed slime in any other way, it is recommended that
+you uninstall it before proceeding. You should clean up any config files tied to
+slime that are left behind as well. Linux users can just purge the slime package
+if it was a distribution install.
+
+To use this contribution, add it to your =~/.spacemacs=
+
+#+BEGIN_SRC emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(slime))
+#+END_SRC
+
+This layer defaults to using [[http://www.sbcl.org/][sbcl]]. If you wan to use a different implementation
+of Common Lisp, you can specify it in your =~/.spacemacs=
+
+#+BEGIN_SRC emacs-lisp
+  (defun dotspacemacs/config ()
+    (setq inferior-lisp-program "/path/to/your/lisp"))
+#+END_SRC
+
+* Key Bindings
+
+** Help
+
+| Key Binding | Description            |
+|-------------+------------------------|
+| ~SPC m h a~ | SLIME apropos          |
+| ~SPC m h d~ | Disassemble symbol     |
+| ~SPC m h D~ | Disassemble definition |
+| ~SPC m h f~ | Describe function      |
+| ~SPC m h h~ | Hyperspec lookup       |
+| ~SPC m h s~ | Describe symbol        |
+
+** Evaluation
+
+| Key Binding | Description                     |
+|-------------+---------------------------------|
+| ~SPC m e b~ | Evaluate buffer                 |
+| ~SPC m e f~ | Evaluate top level s-expression |
+| ~SPC m e e~ | Evaluate last expression        |
+| ~SPC m e r~ | Evaluate region                 |
+
+** REPL
+
+| Key Binding | Description                      |
+|-------------+----------------------------------|
+| ~SPC m s c~ | Change directory                 |
+| ~SPC m s e~ | Evaluate last expression in REPL |
+| ~SPC m s i~ | Start an inferior process        |
+| ~SPC m s p~ | Working directory                |
+| ~SPC m s q~ | Quit                             |
+| ~SPC m s r~ | Restart                          |
+
+** Compile
+
+| Key Binding | Description              |
+|-------------+--------------------------|
+| ~SPC m c c~ | Compile file             |
+| ~SPC m c C~ | Compile file and load it |
+| ~SPC m c f~ | Compile function         |
+| ~SPC m c r~ | Compile region           |
+
+** Navigation
+
+| Key Binding                | Description                                    |
+|----------------------------+------------------------------------------------|
+| ~SPC m g b~                | Before goto definition, popping the find stack |
+| ~SPC m g g~                | Goto definition                                |
+| ~SPC m g G~                | Goto definition other window                   |
+| ~SPC m g n~                | Next note                                      |
+| ~SPC m g N~ or ~SPC m g p~ | Previous note                                  |
+
+** Debug
+
+| Key Binding | Description        |
+|-------------+--------------------|
+| ~SPC m d b~ | Interrupt repl     |
+| ~SPC m d i~ | Inspect definition |
+| ~SPC m d I~ | Inspect instance   |
+
+** Profiling
+
+| Key Binding | Description                                          |
+|-------------+------------------------------------------------------|
+| ~SPC m p f~ | Toggle profile function definition                   |
+| ~SPC m p F~ | List profiled functions                              |
+| ~SPC m p p~ | Profile all functions in package                     |
+| ~SPC m p r~ | Report profiler data                                 |
+| ~SPC m p R~ | Reset profiler                                       |
+| ~SPC m p s~ | Profile functions which have the specified substring |
+| ~SPC m p u~ | Unprofile all                                        |
+
+** Who - Cross referencing
+
+| Key Binding | Description      |
+|-------------+------------------|
+| ~SPC m w b~ | Who binds        |
+| ~SPC m w c~ | Who calls        |
+| ~SPC m w m~ | Who macroexpands |
+| ~SPC m w r~ | Who references   |
+| ~SPC m w s~ | Who sets         |
+| ~SPC m w S~ | Who specializes  |
+
+** Tracing
+
+| Key Binding | Description           |
+|-------------+-----------------------|
+| ~SPC m t f~ | Toggle fancy trace    |
+| ~SPC m t t~ | Toggle trace function |
+| ~SPC m t u~ | Untrace all functions |
+
+** Macro Expansion
+
+| Key Binding | Description                  |
+|-------------+------------------------------|
+| ~SPC m m a~ | Macroexpand sexp all the way |
+| ~SPC m m e~ | Macroexpand sexp once        |
