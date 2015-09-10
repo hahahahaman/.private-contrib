@@ -1,0 +1,3 @@
+[submodule "lisp/mouse-slider-mode"]
+	path = lisp/mouse-slider-mode
+	url = https://github.com/hahahahaman/mouse-slider-mode.git

@@ -17,7 +17,7 @@
         ;; package stuffs go here
         evil-paredit
         glsl-mode
-        mouse-slider-mode
+        ;; mouse-slider-mode
         ;; palette
         ;; racket-mode
         ))
@@ -55,13 +55,13 @@
     :defer t
     :mode ("\\.\\(vert\\|frag\\|geom\\|glsl\\)\\'" . glsl-mode)))
 
-(defun stuff/init-mouse-slider-mode ()
-  (use-package mouse-slider-mode
-    :defer t
-    :commands mouse-slider-mode
-    :config
-    (progn
-      (add-to-list 'mouse-slider-mode-eval-funcs
-                   '(lisp-mode . slime-compile-defun))
-      ;; (setq mouse-slider-scale 1000)
-      )))
+;; (defun stuff/init-mouse-slider-mode ()
+;;   (use-package mouse-slider-mode
+;;     :defer t
+;;     :commands mouse-slider-mode
+;;     :config
+;;     (progn
+;;       (add-to-list 'mouse-slider-mode-eval-funcs
+;;                    '(lisp-mode . slime-compile-defun))
+;;       ;; (setq mouse-slider-scale 1000)
+;;       )))

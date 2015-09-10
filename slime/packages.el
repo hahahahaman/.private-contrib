@@ -85,6 +85,7 @@
           "mpu" 'slime-unprofile-all
 
           "msc" 'slime-cd
+          "msC" 'slime-repl-clear-buffer
           "mse" 'slime-eval-last-expression-in-repl
           "msi" 'slime
           "msp" 'slime-pwd

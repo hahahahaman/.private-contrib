@@ -69,6 +69,7 @@ of Common Lisp, you can specify it in your =~/.spacemacs=
 | Key Binding | Description                      |
 |-------------+----------------------------------|
 | ~SPC m s c~ | Change directory                 |
+| ~SPC m s C~ | Repl clear buffer                |
 | ~SPC m s e~ | Evaluate last expression in REPL |
 | ~SPC m s i~ | Start an inferior process        |
 | ~SPC m s p~ | Working directory                |
