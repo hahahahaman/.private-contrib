@@ -11,8 +11,8 @@
 ;;; License: GPLv3
 
 (setq slime-packages
-  '(slime
-    slime-company))
+      '(slime
+        slime-company))
 
 (defun slime/init-slime ()
   (use-package slime
