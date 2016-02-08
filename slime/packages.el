@@ -45,63 +45,63 @@
       (dolist (m '(lisp-mode
                    slime-repl-mode))
         (evil-leader/set-key-for-mode m
-          "mcc" 'slime-compile-file
-          "mcC" 'slime-compile-and-load-file
-          "mcf" 'slime-compile-defun
-          "mcr" 'slime-compile-region
+          "cc" 'slime-compile-file
+          "cC" 'slime-compile-and-load-file
+          "cf" 'slime-compile-defun
+          "cr" 'slime-compile-region
 
-          "mdb" 'slime-interrupt
-          "mdi" 'slime-inspect-definition
-          "mdI" 'slime-inspect
+          "db" 'slime-interrupt
+          "di" 'slime-inspect-definition
+          "dI" 'slime-inspect
 
-          "meb" 'slime-eval-buffer
-          "mef" 'slime-eval-defun
-          "mee" 'slime-eval-last-sexp
-          "mer" 'slime-eval-region
+          "eb" 'slime-eval-buffer
+          "ef" 'slime-eval-defun
+          "ee" 'slime-eval-last-sexp
+          "er" 'slime-eval-region
 
-          "mgb" 'slime-pop-find-definition-stack
-          "mgg" 'slime-edit-definition
-          "mgG" 'slime-edit-definition-other-window
-          "mgn" 'slime-next-note
-          "mgN" 'slime-previous-note
-          "mgp" 'slime-previous-note
+          "gb" 'slime-pop-find-definition-stack
+          "gg" 'slime-edit-definition
+          "gG" 'slime-edit-definition-other-window
+          "gn" 'slime-next-note
+          "gN" 'slime-previous-note
+          "gp" 'slime-previous-note
 
-          "mha" 'slime-apropos
-          "mhd" 'slime-disassemble-symbol
-          "mhD" 'slime-disassemble-definition
-          "mhf" 'slime-describe-function
-          "mhh" 'slime-hyperspec-lookup
-          "mhs" 'slime-describe-symbol
+          "ha" 'slime-apropos
+          "hd" 'slime-disassemble-symbol
+          "hD" 'slime-disassemble-definition
+          "hf" 'slime-describe-function
+          "hh" 'slime-hyperspec-lookup
+          "hs" 'slime-describe-symbol
 
-          "mma" 'slime-macroexpand-all
-          "mme" 'slime-macroexpand-1
+          "ma" 'slime-macroexpand-all
+          "me" 'slime-macroexpand-1
 
-          "mpf" 'slime-toggle-profile-fdefinition
-          "mpF" 'slime-profiled-functions
-          "mpp" 'slime-profile-package
-          "mpr" 'slime-profile-report
-          "mpR" 'slime-profile-reset
-          "mps" 'slime-profile-by-substring
-          "mpu" 'slime-unprofile-all
+          "pf" 'slime-toggle-profile-fdefinition
+          "pF" 'slime-profiled-functions
+          "pp" 'slime-profile-package
+          "pr" 'slime-profile-report
+          "pR" 'slime-profile-reset
+          "ps" 'slime-profile-by-substring
+          "pu" 'slime-unprofile-all
 
-          "msc" 'slime-cd
-          "msC" 'slime-repl-clear-buffer
-          "mse" 'slime-eval-last-expression-in-repl
-          "msi" 'slime
-          "msp" 'slime-pwd
-          "msq" 'slime-quit-lisp
-          "msr" 'slime-restart-inferior-lisp
+          "sc" 'slime-cd
+          "sC" 'slime-repl-clear-buffer
+          "se" 'slime-eval-last-expression-in-repl
+          "si" 'slime
+          "sp" 'slime-pwd
+          "sq" 'slime-quit-lisp
+          "sr" 'slime-restart-inferior-lisp
 
-          "mtf" 'slime-toggle-fancy-trace
-          "mtt" 'slime-toggle-trace-fdefinition
-          "mtu" 'slime-untrace-all
+          "tf" 'slime-toggle-fancy-trace
+          "tt" 'slime-toggle-trace-fdefinition
+          "tu" 'slime-untrace-all
 
-          "mwb" 'slime-who-binds
-          "mwc" 'slime-who-calls
-          "mwm" 'slime-who-macroexpands
-          "mwr" 'slime-who-references
-          "mws" 'slime-who-sets
-          "mwS" 'slime-who-specializes)))))
+          "wb" 'slime-who-binds
+          "wc" 'slime-who-calls
+          "wm" 'slime-who-macroexpands
+          "wr" 'slime-who-references
+          "ws" 'slime-who-sets
+          "wS" 'slime-who-specializes)))))
 
 (defun stuff/init-slime-company ()
   (use-package slime-company
