@@ -50,9 +50,11 @@
           "cf" 'slime-compile-defun
           "cr" 'slime-compile-region
 
+          "ds" 'slime-disassemble-symbol
+          "dd" 'slime-disassemble-definition
           "db" 'slime-interrupt
-          "di" 'slime-inspect-definition
-          "dI" 'slime-inspect
+          "do" 'slime-inspect-definition
+          "di" 'slime-inspect
 
           "eb" 'slime-eval-buffer
           "ef" 'slime-eval-defun
@@ -67,8 +69,6 @@
           "gp" 'slime-previous-note
 
           "ha" 'slime-apropos
-          "hd" 'slime-disassemble-symbol
-          "hD" 'slime-disassemble-definition
           "hf" 'slime-describe-function
           "hh" 'slime-hyperspec-lookup
           "hs" 'slime-describe-symbol
