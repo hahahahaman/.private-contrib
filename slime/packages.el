@@ -12,7 +12,8 @@
 
 (setq slime-packages
       '(slime
-        slime-company))
+        ;; slime-company
+        ))
 
 (defun slime/init-slime ()
   (use-package slime
